@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo LogIn Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main>
+        <div class="hero min-h-screen" style="background-image: url(https://img.pikbest.com/origin/09/05/39/25spIkbEsTdFV.jpg!sw800);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-neutral-content text-center">
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Number</span>
+                            </label>
+                            <input id="phone-number" type="text" placeholder="Enter Your Number" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Pin</span>
+                            </label>
+                            <input id="pin-number" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id="login-btn" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/share.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

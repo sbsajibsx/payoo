@@ -3,38 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payoo LogIn Page</title>
+    <title>Payoo Home</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <main>
-        <div class="hero min-h-screen" style="background-image: url(https://img.pikbest.com/origin/09/05/39/25spIkbEsTdFV.jpg!sw800);">
-            <div class="hero-overlay bg-opacity-60"></div>
-            <div class="hero-content text-neutral-content text-center">
-                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <form class="card-body">
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">Number</span>
-                            </label>
-                            <input id="phone-number" type="text" placeholder="Enter Your Number" class="input input-bordered" required />
+    <main class="hero min-h-screen ">
+        <div class="hero bg-base-200 min-h-screen">
+            <div class="hero-content text-center">
+              <div class="max-w-md border-solid border-2 border-sky-500 px-4 py-4">
+                <h1 class="text-5xl font-bold mb-4">Your Account</h1>
+                <!-- balance card -->
+                <div class="card bg-base-100 w-96 shadow-xl mb-4">
+                    <div class="card-body">
+                      <!-- balance -->
+                      <div class="stats shadow border-solid border-2 border-green-500 border-t-gray-500-500">
+                        <div class="stat">
+                          <div class="stat-title">Total balance</div>
+                          <div id="total-balance" class="stat-value">0</div>
                         </div>
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">Pin</span>
-                            </label>
-                            <input id="pin-number" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
-                        </div>
-                        <div class="form-control mt-6">
-                            <button id="login-btn" class="btn btn-primary">Login</button>
-                        </div>
-                    </form>
+                    </div>
+                    </div>
                 </div>
+                <!-- balance card end -->
+                <!-- button -->
+                 <div class="mb-5">
+                    <button id="show-add-money" class="btn btn-active btn-primary">Add Money</button>
+                    <button id="show-cash-out" class="btn btn-active btn-error">Cash Out</button>
+                    <button id="Transactions-btn" class="btn btn-active btn-accent">Transactions</button>
+                 </div>
+                 <!-- add money start -->
+                 <div id="add-money-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    
+                    <form class="card-body">
+                        <marquee class="bg-yellow-400 text-black rounded-md" behavior="" direction="right">Add Your Money</marquee>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Ammount</span>
+                        </label>
+                        <input id="add-money-input" type="text" placeholder="Enter Your Ammount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input id="add-money-pin" type="password" placeholder="Enter Your Pin" class="input input-bordered" autocomplete="off" required />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="add-btn" class="btn btn-primary">Add Money</button>
+                      </div>
+                    </form>
+                 </div>
+                 <!-- cash out start -->
+                 <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    
+                    <form class="card-body">
+                        <marquee class="bg-red-400 text-black rounded-md" behavior="" direction="right">Cash Out Your Money</marquee>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Ammount</span>
+                        </label>
+                        <input id="cash-out-input" type="text" placeholder="Enter Your Ammount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input id="cash-out-pin" type="password" placeholder="Enter Your Pin" class="input input-bordered" autocomplete="off" required />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+                      </div>
+                    </form>
+                 </div>
+                 <!-- transaction -->
+                 <div id="transaction-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                  <marquee class="mx-6 my-6" behavior="" direction="right">Your Transactions</marquee>
+                  <div id="transactions-div">
+
+                  </div>
+
+               </div>
+              </div>
             </div>
         </div>
     </main>
     <script src="js/share.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/add.js"></script>
+    <script src="js/out.js"></script>
 </body>
 </html>
